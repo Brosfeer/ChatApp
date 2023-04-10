@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">chat app</string>
+    <string name="welcome_back">welcome back</string>
+    <string name="login_to_countinue">Login to countinue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="add_image">Add Image</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="select_user">Select User</string>
+    <string name="type_a_message">Type A Message</string>
+    <string name="type_a_message1">Type a message</string>
+    <string name="online">Online</string>
+</resources>
