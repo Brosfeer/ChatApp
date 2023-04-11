@@ -15,14 +15,16 @@
         android:layout_marginBottom="@dimen/_16sdp"
         android:background="@drawable/background_content_top"
         app:layout_constraintBottom_toTopOf="@id/layoutSend"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
     <View
         android:id="@+id/headerBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/primary"
         app:layout_constraintBottom_toTopOf="@id/viewSupporter"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageBack"
         android:layout_width="@dimen/_30sdp"
@@ -32,9 +34,9 @@
         android:layout_marginTop="@dimen/_12sdp"
         android:padding="@dimen/_5sdp"
         android:src="@drawable/ic_back"
+        android:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:tint="@color/white"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageInfo"
@@ -45,9 +47,10 @@
 
         android:padding="@dimen/_4sdp"
         android:src="@drawable/ic_info"
+        android:tint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:tint="@color/white"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textName"
         android:layout_width="0dp"
@@ -63,15 +66,15 @@
         app:layout_constraintBottom_toBottomOf="@id/imageBack"
         app:layout_constraintEnd_toStartOf="@id/imageInfo"
         app:layout_constraintStart_toEndOf="@id/imageBack"
-        app:layout_constraintTop_toTopOf="@id/imageBack"
-        />
+        app:layout_constraintTop_toTopOf="@id/imageBack" />
+
     <View
         android:id="@+id/viewSupporter"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/primary"
         android:layout_marginTop="@dimen/_12sdp"
-        app:layout_constraintTop_toBottomOf="@id/imageBack"/>
+        android:background="@color/primary"
+        app:layout_constraintTop_toBottomOf="@id/imageBack" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -81,11 +84,12 @@
         android:clipToPadding="false"
         android:orientation="vertical"
         android:overScrollMode="never"
-        app:stackFromEnd="true"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/viewBackground"
-        app:layout_constraintTop_toBottomOf="@id/viewSupporter"/>
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"
+        app:stackFromEnd="true" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="@dimen/_25sdp"
@@ -93,7 +97,7 @@
         app:layout_constraintBottom_toBottomOf="@id/viewBackground"
         app:layout_constraintEnd_toEndOf="@id/viewBackground"
         app:layout_constraintStart_toStartOf="@id/viewBackground"
-        app:layout_constraintTop_toTopOf="@id/viewBackground"/>
+        app:layout_constraintTop_toTopOf="@id/viewBackground" />
 
 
     <FrameLayout
@@ -105,19 +109,17 @@
         android:layout_marginBottom="@dimen/_12sdp"
         android:background="@drawable/ic_send"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        >
+        app:layout_constraintEnd_toEndOf="parent">
+
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/_45sdp"
-
-            android:padding="@dimen/_8sdp"
-            />
-
+            android:padding="@dimen/_8sdp" />
 
 
     </FrameLayout>
+
     <EditText
         android:id="@+id/inputMessage"
         android:layout_width="0dp"
@@ -138,17 +140,18 @@
         android:textColorHint="@color/secondary_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/layoutSend"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textAvailability"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/viewSupporter"
         android:background="@color/green"
-        android:text="@string/online"
         android:gravity="center"
-        android:textSize="@dimen/_10ssp"
-        android:textColor="@color/white"
         android:padding="@dimen/_2sdp"
-        android:visibility="gone"/>
+        android:text="@string/online"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter" />
 </androidx.constraintlayout.widget.ConstraintLayout>

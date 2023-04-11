@@ -5,7 +5,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -22,6 +21,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import java.util.Random;
 
 public class MessagingService extends FirebaseMessagingService {
+
     @Override
     public void onNewToken(@NonNull String token) {
         super.onNewToken(token);
@@ -56,7 +56,7 @@ public class MessagingService extends FirebaseMessagingService {
         builder.setContentIntent(pendingIntent);
         builder.setAutoCancel(true);
 
-        if(Build.VERSION.PREVIEW_SDK_INT >= Build.VERSION_CODES.O){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             CharSequence channelName = "Chat Message";
             String channelDescription = "This message channel is used for chat message notification";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
